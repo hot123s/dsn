@@ -49,7 +49,7 @@ func Parse(dsn string) (*DSN, error) {
 	dsn = tmp[1]
 	foundSlash := false
 
-	for i := len(dsn) - 1; i >= 0; i-- {
+	for i :=  0; i <len(dsn); i++ {
 		if dsn[i] == '/' {
 			foundSlash = true
 			var j, k int
